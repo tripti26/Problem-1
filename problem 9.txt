@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class IsSpecialNumber {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a  integer: ");
+        int num = scanner.nextInt();
+        int first= num / 10;
+        int second = num % 10;
+        int sum = first + second;
+        int product = first * second;
+        boolean isSpecial = (sum + product) == num;
+        if (isSpecial) {
+            System.out.println(num + " yes, it is special integer.");
+        } else {
+            System.out.println(num + " No, it is not  special integer.");
+        }
+
+        scanner.close();
+    }
+}

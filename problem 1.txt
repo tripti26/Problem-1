@@ -1,0 +1,16 @@
+import java.util.Scanner;
+public  class CountNumber {
+
+    public static void main(String[] args) {
+            Scanner scan = new Scanner(System.in);
+            System.out.print("Enter the integer: ");
+            int num = scan.nextInt();
+            if(num<0) {
+                num = num * (-1);
+            }
+
+            int noDigit = String.valueOf(Math.abs(num)).length();
+            System.out.println("Number of digits: " + noDigit);
+            scan.close();
+        }
+    }

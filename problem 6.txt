@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class VowelCount {
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter word array : ");
+        String input = scanner.nextLine();
+        String[] strings = input.split(" ");    
+        String maxVowelStr = "";
+        int maxVowelCount = 0;
+        for (String str : strings) {
+            int noVowel = countVowels(str);
+            if (noVowel > maxVowelCount) {
+                maxVowelCount = noVowel;
+                maxVowelStr = str;
+            }
+        }
+        System.out.println("String has more vowels: " + maxVowelStr);
+    }
+    private static int countVowels(String str) {
+        int count = 0;
+        for (char ch : str.toLowerCase().toCharArray()) {
+            if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u') {
+                count++;
+            }
+        }
+        return count;
+    }
+}

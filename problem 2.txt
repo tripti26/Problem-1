@@ -1,0 +1,15 @@
+import java.util.Scanner;
+public class GrossPriceCalculation{
+
+        public static void main(String[] args) {
+            Scanner scanner = new Scanner(System.in);
+            System.out.print("Enter net price : ");
+            double netPrice = scanner.nextDouble();
+            System.out.print("Enter tax rate : ");
+            double taxRate = scanner.nextDouble();
+            double grossPrice = netPrice / (1 + taxRate);
+            System.out.println("Gross price : " + grossPrice);
+            scanner.close();
+        }
+
+}
